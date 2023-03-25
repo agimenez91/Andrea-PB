@@ -1,0 +1,32 @@
+@import 'tools';
+
+.carrousel {
+    @include grid (1, var(--margin-S));
+
+    @include MQ ($tablet) {
+        @include grid (3, var(--margin-XL));
+    }
+}
+
+.carrousel__dots {
+    display: flex;
+    align-items: center;
+    gap: var(--margin-S);
+
+    @include MQ($tablet) {
+        grid-column: 1/11;
+    }
+
+    &__dot {
+        appearance: none;
+        width: 0.5rem;
+        height: 0.5rem;
+        border-radius: 50%;
+        background-color: var(--bg-color-blue-light);
+    
+        &.active {
+            border: 1px solid var(--color-blue-light);
+            background-color: var(--bg-color-blue);
+        }
+    }
+}

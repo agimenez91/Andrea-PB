@@ -1,0 +1,43 @@
+@import 'tools';
+
+
+.icon {
+    &--S {
+        height: 8rem;
+        width: 8rem;
+    }
+    &--M {
+        height: 10rem;
+        width: 10rem;
+    }
+    &--L {
+        height: 15rem;
+        width: 15rem;
+    }
+}
+
+
+.social-media {
+    @include flexshort (row, center, center, var(--margin-S));
+
+    @include MQ($tablet) {
+        justify-content: flex-start;
+    }
+
+    &__icon {
+        @include flexshort (row, center, center, 0);
+        background-color: var(--bg-color-white);
+        fill: var(--bg-color-blue);
+        padding: 1rem;
+        transition: 0.3s ease-in-out;
+
+        & svg {
+            width: var(--margin-M);
+            height: var(--margin-M);            
+        }
+
+        &:hover {
+            fill: var(--bg-color-orange);
+        }
+    }
+}

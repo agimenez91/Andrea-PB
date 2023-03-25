@@ -1,0 +1,150 @@
+// Responsive mixin
+
+$desktop:   70rem;
+$tablet:    48rem;
+$mobile:    30rem;
+
+@mixin MQ($mediaquery_unit: $mobile) {
+    @media all and (min-width: $mediaquery_unit) {
+        @content;
+    }
+}
+  
+// Flex mixin
+
+@mixin flexible ($dis, $direction, $wrap, $just, $align, $gap) {
+    display: $dis;
+    flex-flow: $direction $wrap;
+    justify-content: $just;
+    align-items: $align;
+    gap: $gap;
+}
+
+@mixin flexshort ($direction, $just, $align, $gap) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $just;
+    align-items: $align;
+    gap: $gap;
+}
+
+@mixin flexdir ($direction) {
+    display: flex;
+    flex-direction: $direction;
+}
+
+// Grid mixin 
+
+@mixin grid ($columns, $gap) {
+    display: grid;
+    grid-template-columns: repeat($columns, 1fr);
+    gap: $gap;
+}
+
+// Margin mixins
+
+@mixin padding($top, $side) {
+    padding: $top $side;
+}
+
+@mixin responsivepaddingX ($left: 3.2rem, $right: 3.2rem) {
+    padding-left: $left;
+    padding-right: $right;
+
+    @include MQ ($tablet) {
+        padding-left: ($left * 2.5);
+        padding-right: ($right * 2.5);
+    }
+
+    @include MQ ($desktop) {
+        padding-left: ($left * 5);
+        padding-right: ($right * 5);
+    }    
+}
+
+@mixin responsivepaddingY ($top: 8rem, $bottom: 8rem) {
+    padding-top: $top;
+    padding-bottom: $bottom;
+
+    @include MQ ($tablet) {
+        padding-top: $top;
+        padding-bottom: $bottom;
+    }
+
+    @include MQ ($desktop) {
+        padding-top: ($top * 2);
+        padding-bottom: ($bottom * 2);
+    }    
+}
+
+@mixin responsivemarginX ($left: 3.2rem, $right: 3.2rem) {
+    margin-left: $left;
+    margin-right: $right;
+
+    @include MQ ($tablet) {
+        margin-left: ($left * 2.5);
+        margin-right: ($right * 2.5);
+    }
+
+    @include MQ ($desktop) {
+        margin-left: ($left * 5);
+        margin-right: ($right * 5);
+    }    
+}
+
+@mixin responsivemarginY ($top: 8rem, $bottom: 8rem) {
+    margin-top: $top;
+    margin-bottom: $bottom;
+
+    @include MQ ($tablet) {
+        margin-top: $top;
+        margin-bottom: $bottom;
+    }
+
+    @include MQ ($desktop) {
+        padding-top: ($top * 2);
+        padding-bottom: ($bottom * 2);
+    }    
+}
+
+// Map layers
+$map-layers: (
+    "below":        -1,
+    "default":      0,
+    "above":        1,
+    "over":         2,
+    "absolute":     3
+);
+
+@function z($layer) {
+    @return map-get($map-layers, $layer);
+}
+
+//Map margins
+$map-margins: (
+    'XL':                   16rem,
+    'L':                     8rem,
+    'M':                   3.2rem,
+    'S':                   1.6rem,
+);
+
+@function margin($margin) {
+    @return map-get($map-margins, $margin);
+}
+
+@mixin responsiveimg ($url) {
+    background-image: url('$url');
+
+    @include MQ($tablet) {
+        background-image: url('($url)-2');
+    }
+
+    @include MQ($desktop) {
+        background-image: url('($url)-3');
+    }
+}
+
+@mixin colorinvert {
+    color: var(--color-white);
+    background-color: var(--bg-color-black);
+}

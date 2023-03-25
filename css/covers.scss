@@ -1,0 +1,54 @@
+@import 'tools';
+
+.cover {
+    @include flexshort (column, center, flex-end, var(--margin-S));
+
+    &__text {
+        @include flexshort (column, flex-start, flex-start, var(--margin-S));
+        width: 100%;
+    }
+
+    &__img {
+        max-width: 30rem;
+    }
+
+    @include MQ ($tablet) {
+        @include grid (10, var(--margin-S));
+        align-items: center;
+        
+        &__text {
+            grid-column: 1/6;
+        }
+
+        &__img {
+            grid-column: 7/11;
+            max-width: inherit;
+        }        
+    }
+}
+
+.cover-small {
+    @include flexshort (column, center, center, var(--margin-S));
+    @include colorinvert;
+
+    @include MQ ($tablet) {
+        flex-direction: row;
+
+        & p {
+            max-width: 60%;
+        }
+    }
+
+}
+
+.p404 {
+    @include MQ ($tablet){
+        & .cover__text {
+            grid-column: 1/5;
+        }
+
+        & .cover__img {
+            grid-column: 5/11;
+        }
+    }
+}

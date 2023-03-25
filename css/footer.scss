@@ -1,0 +1,92 @@
+@import 'tools';
+
+
+.footer {
+    @include flexshort (column, center, center, var(--margin-M));
+    @include responsivepaddingY();
+    @include responsivepaddingX();
+    @include colorinvert;
+    text-align: center;
+
+
+    @include MQ ($tablet) {
+        @include grid (4, var(--margin-M));
+        text-align: inherit;
+        align-items: start;
+    }
+    
+    @include MQ ($desktop) {
+        padding-top: var(--margin-XL);
+    }
+
+    &__links1 {
+        @include MQ ($tablet) {
+        grid-column: 3;
+        }
+    }
+
+    &__subscription {
+        @include flexshort (row, center, center, 0);
+
+        &>input[type='email'] {
+            width: 100%;
+        }
+
+        &>input[type='submit'] {
+            width: 100%;
+            font-size: var(--typo-S);
+        }
+
+        @include MQ ($tablet) {
+            grid-column: 3/span 2;
+        }
+    }
+
+    .social-media {
+        grid-row: 2;
+    }
+
+}
+
+.footer__links1, .footer__links2 {
+    @include flexshort (column, center, center, var(--margin-S));   
+
+    @include MQ ($desktop) {
+        align-items: flex-start;
+    }
+}
+
+.footer__banner {
+    @include flexshort (column, space-between, center, var(--margin-S));
+    background-color: var(--bg-color-blue);
+    padding: var(--margin-S);
+    @include responsivepaddingX;
+    color: var(--color-white);
+    font-size: var(--typo-XXS);
+
+    & ul {
+        @include flexshort (column, space-between, center, var(--margin-S));
+
+        @include MQ ($tablet) {
+            @include flexshort (row, space-between, center, var(--margin-S));
+        }
+    }
+
+    & a {
+        color: var(--color-white);
+        text-align: center;
+        font-size: var(--typo-XXS);
+
+        &:hover {
+            color: var(--color-orange);
+        }
+    }
+
+    & p {
+        font-size: var(--typo-XXS);
+    }
+
+    @include MQ ($tablet) {
+        @include flexshort (row, space-between, center, 0);   
+    }
+}

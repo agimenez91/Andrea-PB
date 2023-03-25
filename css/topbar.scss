@@ -1,0 +1,81 @@
+@import 'tools';
+
+.topbar {
+    @include flexshort ( row, space-between, center, inherit);
+    position: relative;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+
+    @include responsivepaddingX ();
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    mix-blend-mode: plus-lighter;
+    @media not all and (min-resolution:.001dpcm) {
+        mix-blend-mode: inherit;
+    }
+
+    &__logo {
+        z-index: z(absolute);
+
+        &>svg {
+            width: 10rem;
+            fill: var(--bg-color-blue);
+            
+            @include MQ ($tablet) {
+                width: 15rem;
+            }
+        }
+    }
+}
+
+.nav {
+    @include flexshort (column, center, center, var(--margin-M));
+    background-color: var(--bg-color-blue-light-T8);
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    display: none;
+
+    &__item>a {
+        text-decoration: none;
+        color: var(--color-blue);
+        transition: 0.3s ease-in-out;
+
+        &:hover {
+            color: var(--color-orange);
+        }
+    }
+
+    @include MQ ($desktop) {
+        @include flexshort (row, space-between, center, var(--margin-S));
+        background-color: inherit;
+        position: inherit;
+        top: inherit;
+        right: inherit;
+        width: inherit;
+        height: auto;
+        mix-blend-mode: revert;
+    }
+}
+
+.burger {
+    @include flexshort (column, center, center, 0.8rem);
+    z-index: z(absolute);
+
+    @include MQ ($desktop) {
+        display: none;
+    }
+
+    &__bar {
+        width: var(--margin-M);
+        height: 3px;
+        background-color: var(--bg-color-blue);
+    }
+
+    
+}
+
+

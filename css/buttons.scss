@@ -1,0 +1,148 @@
+@import 'tools';
+
+// Buttons start
+button, .btn--1, input[type='submit'] {
+    @include flexible (flex, column, no-wrap, center, center, var(--margin-S));
+    @include padding (var(--typo-S), var(--margin-M));
+	border: none;
+	cursor: pointer;
+	outline: inherit;
+    font-family: var(--typo-accent);
+    white-space: nowrap;
+    font-size: var(--typo-XS);
+    letter-spacing: 0.15rem;
+    color: var(--color-white);
+    background-color: var(--bg-color-blue);
+    transition: 0.5s ease-in-out;
+
+    @include MQ ($tablet) {
+        font-size: var(--typo-S);
+    }
+
+    &.btn--arrow {
+        padding: var(--typo-S);
+    }
+
+    &:hover {
+        color: var(--color-black);
+        background-color: var(--bg-color-blue-light);
+
+        &.dark {
+            color: var(--color-white);
+            background-color: var(--bg-color-blue);
+        }
+    }
+
+    &.dark {
+        color: var(--color-black);
+        background-color: var(--bg-color-blue-light);
+    }
+
+}
+
+.btn--2 {
+    color: var(--color-white);
+    background-color: var(--bg-color-orange);
+
+    &:hover {
+        color: var(--color-black);
+        background-color: var(--bg-color-orange-light);
+    }
+}
+
+.btn--3 {
+    color: var(--color-black);
+    background-color: var(--bg-color-green);
+
+    &:hover {
+        color: var(--color-black);
+        background-color: var(--bg-color-green-light);
+    }
+}
+
+.btn--4 {
+    color: var(--color-black);
+    background-color: var(--bg-color-yellow);
+
+    &:hover {
+        color: var(--color-black);
+        background-color: var(--bg-color-yellow-light);
+    }
+}
+
+.btn--5 {
+    color: var(--color-black);
+    background-color: var(--bg-color-pink);
+
+    &:hover {
+        color: var(--color-black);
+        background-color: var(--bg-color-pink-light);
+    }
+}
+
+// Button ends
+
+// Link start
+
+a {
+    color: var(--bg-color-blue);
+    text-decoration: underline;
+    font-size: var(--typo-XS);
+    transition: 0.3s ease-in-out;
+
+    @include MQ ($tablet) {
+        font-size: var(--typo-S);
+    }
+
+    &:checked {
+        color: var(--color-yellow);
+    }
+
+    &.dark {
+        color: var(--color-white);
+
+        &:hover {
+            color: var(--color-orange-light);
+        }
+    }
+
+    &:hover {
+        color: var(--color-orange);
+    }
+
+    &svg:hover {
+        color: var(--color-orange);
+    }
+
+}
+
+// Link ends
+
+//Previous-next buttons
+
+.previousnext {
+    @include flexshort (row, center, center, var(--margin-S));
+    width: 100%;
+    color: var(--color-blue);
+    margin-top: var(--margin-M);
+
+    & a {
+        background-color: inherit;
+        padding: 0;
+        display: flex;
+        gap: var(--L);
+        align-items: center;
+    }
+
+    & svg {
+        transition: 0.3s ease-in-out;
+
+        // &:hover {
+        //     fill: var(--bg-color-orange);
+        // }
+    }
+
+    @include MQ ($tablet) {
+        // grid-column: 3/10;
+    }
+}

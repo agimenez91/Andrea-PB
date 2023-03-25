@@ -1,0 +1,174 @@
+// Custom properties: 
+:root{
+    // Colors
+    --color-black:                #0B091F;
+    --color-white:                #ffffff;
+
+    --color-blue:                 #5544F2;
+    --color-blue-light:           #CDC7FA;
+    --color-blue-dark:            #3D31A4;
+
+    --color-orange:               #F0573D;
+    --color-orange-light:         #F2C1B4;
+    --color-orange-dark:          #973E28;
+
+    --color-green:                #48F194;
+    --color-green-light:          #A7F1C8;
+    --color-green-dark:           #008946;
+    
+    --color-yellow:               #F8CC56;
+    --color-yellow-light:         #FCE9AD;
+    --color-yellow--dark:         #F2AA5A;
+
+    --color-pink:                 #F12DF4;
+    --color-pink-light:           #EDB9EE;
+    --color-pink-dark:            #A513A7;
+
+    // Backgrounds
+
+    --bg-color-black:             var(--color-black);
+    --bg-color-white:             var(--color-white);
+
+    --bg-color-blue:              var(--color-blue);
+    --bg-color-blue-light:        var(--color-blue-light);
+    --bg-color-blue-dark:         var(--color-blue-dark);
+
+    --bg-color-orange:            var(--color-orange);
+    --bg-color-orange-light:      var(--color-orange-light);
+    --bg-color-orange-dark:       var(--color-orange-dark);
+
+    --bg-color-green:             var(--color-green);
+    --bg-color-green-light:       var(--color-green-light);
+    --bg-color-green-dark:        var(--color-green-dark);
+    
+    --bg-color-yellow:            var(--color-yellow);
+    --bg-color-yellow-light:      var(--color-yellow-light);
+    --bg-color-yellow--dark:      var(--color-yellow--dark);
+
+    --bg-color-pink:              var(--color-pink);
+    --bg-color-pink-light:        var(--color-pink-light);
+    --bg-color-pink-dark:         var(--color-pink-dark);
+
+    //Transparencies
+    --bg-color-blue-light-T8:     #cdc7faf1;
+    
+    // Tipografía 
+    --typo-main:                  'Inter', sans-serif;
+    --typo-accent:                "Bely Display", "lemonde-journal", serif;
+
+    // Units Margins
+    --margin-XXL:                   16rem;
+    --margin-XL:                     8rem;
+    --margin-L:                      4rem;
+    --margin-M:                    3.2rem;
+    --margin-S:                    1.6rem;
+    --margin-XS:                   1.4rem;
+
+    //Units typography
+    --typo-XXL:                    4.8rem;
+    --typo-XL:                       4rem;
+    --typo-L:                      3.2rem;
+    --typo-M:                        2rem;
+    --typo-S:                      1.8rem;
+    --typo-XS:                     1.6rem;
+    --typo-XXS:                    1.4rem;
+
+    //Media queries units
+    --desktop:                      70rem;
+    --tablet:                       48rem;
+    --mobile:                       30rem;
+
+  }
+  
+  // Margin and padding reset
+  * , *::before , *::after{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    vertical-align: baseline;
+  }
+//   *::before , *::after{
+//     display: block;
+//   }
+  
+  // Image Reset
+  img , picture , video , iframe , figure{
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;        
+    object-position: center center;
+  }
+  
+  // Links reset
+  a {
+    text-decoration: none;
+    color:inherit;
+    font-size:inherit;
+  }
+  
+  p a {
+    display: inline;
+  }
+  
+  // List reset
+  li {
+    list-style-type: none;
+  }
+  
+  // Anchor behaviour
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  // Tags reset
+  h1 , h2 , h3 , h4 , h5 , h6 , p ,span , a , strong , blockquote , i , b , u , em {
+    font-size: inherit;
+    font-weight: inherit;
+    font-style: inherit;
+    text-decoration: none;
+    color:inherit;
+  }
+  
+  // Select configuration
+  ::selection {
+    background-color: var(--bg-color-blue-light);
+    color: var(--color-blue-dark);
+  }
+  
+  // Typography and forms reset
+  form , input, textarea, select , button , label{
+    font-family: inherit;
+    font-size: inherit;
+    hyphens: auto;
+    background-color: transparent;
+    color:inherit;
+    appearance: none;
+  }
+  
+  // Tables reset
+  table , tr , td {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+  
+  // SVG reset
+  svg{
+    display: block;
+    fill: currentColor;
+  }
+  
+  // Typography
+
+  html {
+    font-size: 62.5%;
+    font-family: var(--typo-main);
+    color: var(--color-black);
+    font-smooth: always;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    max-width: 160rem;
+    margin: auto;
+  }
+

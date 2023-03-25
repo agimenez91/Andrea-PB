@@ -1,0 +1,97 @@
+@import 'tools';
+
+// Fonts
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=fallback'); //google
+@import url("https://use.typekit.net/bpx3qqq.css"); //adobe
+
+// Headings
+h1, .h1 {
+    font-family: var(--typo-accent);
+    font-size: var(--typo-L);
+    letter-spacing: 0.15rem;
+    margin-bottom: 0.1em;
+
+    @include MQ($desktop) {
+        font-size: var(--typo-XXL);
+    }
+
+}
+
+h2, .h2 {
+    font-family: var(--typo-accent);
+    font-size: var(--typo-L);
+    margin-bottom: 0.2em;
+
+    @include MQ($desktop) {
+        font-size: var(--typo-XL);
+    }
+}
+
+h3, .h3 {
+    font-family: var(--typo-accent);
+    font-size: var(--typo-S);
+    margin-bottom: 0.3em;
+
+    @include MQ($desktop) {
+        font-size: var(--typo-M);
+    }
+}
+
+h4, .h4, .subtitle--L {
+    font-weight: 500;
+    font-size: var(--typo-S);
+    color: var(--color-blue);
+    margin-bottom: 0.3em;
+
+    &.dark {
+        color: var(--color-blue-light)
+    }
+
+    @include MQ($desktop) {
+        font-size: var(--typo-M);
+    }
+}
+
+h5, .h5, .subtitle--M {
+    font-weight: 500;
+    font-size: var(--typo-S);
+    color: var(--color-blue);
+    margin-bottom: 0.3em;
+
+    &.dark {
+        color: var(--color-blue-light)
+    }
+
+    @include MQ($desktop) {
+        font-size: var(--typo-M);
+    }
+}
+
+h6, .h6, .subtitle--S {
+    font-weight: 500;
+    font-size: var(--typo-XS);
+    color: var(--color-blue);
+    margin-bottom: 0.3em;
+
+    &.dark {
+        color: var(--color-blue-light)
+    }
+
+    @include MQ($desktop) {
+        font-size: var(--typo-S);
+    }
+}
+
+// Text
+
+p, .p {
+    hyphens: auto;
+    font-size: var(--typo-XS);
+    margin-bottom: 0.3em;
+
+    @include MQ($desktop) {
+        font-size: var(--typo-M);
+        max-width: 70rem;
+    }
+}

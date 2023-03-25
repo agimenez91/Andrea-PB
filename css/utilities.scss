@@ -1,0 +1,26 @@
+@import 'tools';
+
+.frame {
+    @include responsivepaddingX;
+    @include responsivepaddingY;
+}
+
+.xtra-mrgn--bttm {
+    margin-bottom: 1em;
+}
+
+.dark {
+    @include colorinvert;
+}
+
+.section__wrap {
+    @include flexshort (column, center, center, var(--margin-L));
+}
+
+.margin-auto {
+    margin: auto;
+}
+
+.nopaddingtop {
+    padding-top: 0;
+}
