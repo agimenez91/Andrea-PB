@@ -1,0 +1,92 @@
+@import 'tools';
+
+//Blog section
+.blog {
+    @include grid (1, var(--margin-M));
+    justify-items: center;
+
+    &__img {
+        max-width: 20rem;
+        margin-top: var(--margin-M);
+        justify-self: center;
+    }
+
+    @include MQ ($tablet) {
+        @include grid (9, var(--margin-M));
+
+        &__img {
+            grid-row: 3;
+        }
+
+        & .previousnext {
+            grid-column: 3/10;
+        }
+
+        & .card-blog--expand {
+            grid-column: 3/10;
+        }
+    }
+}
+
+//Sidebar
+.sidebar {
+    @include grid (1, var(--margin-S));
+    justify-items: center;
+    text-align: center;
+    padding-top: var(--margin-M);
+
+    @include MQ ($tablet) {
+        grid-column: 1 / 2;
+        grid-row: 1 / span 2;
+        justify-items: start;
+        text-align: left;
+        padding-top: 0;
+
+    }
+}
+
+
+//Article
+
+.article {
+    @include grid (1, var(--margin-M));
+    justify-items: center;
+
+    @include MQ ($tablet) {
+        @include grid (5, var(--margin-XL));
+
+        &__content {
+            grid-column: 2/6;
+        }
+
+        & .sidebar {
+            grid-row: 1;
+        }
+
+        & .previousnext {
+            grid-column: 2/6;
+        }
+    }
+
+    @include MQ ($desktop) {
+        @include grid (4, var(--margin-XL));
+
+        &__content {
+            grid-column: 2/5;
+        }
+
+        & .sidebar {
+            grid-row: 1;
+        }
+
+        & .previousnext {
+            grid-column: 2/5;
+        }
+    }
+}
+
+.thumbnail {
+    aspect-ratio: 16/9;
+    width: 100%;
+    max-width: 40rem;
+}

@@ -1,5 +1,7 @@
 @import 'tools';
 
+//Main cover
+
 .cover {
     @include flexshort (column, center, flex-end, var(--margin-S));
 
@@ -27,6 +29,8 @@
     }
 }
 
+//Small cover
+
 .cover-small {
     @include flexshort (column, center, center, var(--margin-S));
     @include colorinvert;
@@ -41,6 +45,8 @@
 
 }
 
+//404 cover
+
 .p404 {
     @include MQ ($tablet){
         & .cover__text {
@@ -51,4 +57,34 @@
             grid-column: 5/11;
         }
     }
+}
+
+//About cover
+
+.about .cover__img {
+
+    margin-bottom: -11rem;
+
+    @include MQ ($tablet) {
+        margin-bottom: -3px;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+}
+
+//Article cover
+
+.cover--article {
+    @include flexshort (column, center, center, var(--margin-S));
+    margin-bottom: var(--margin-M);
+
+    &__img {
+        width: 100%;
+
+        @include MQ ($desktop) {
+            height: 50vh;
+        }
+    }
+
 }

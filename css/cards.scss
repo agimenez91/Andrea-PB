@@ -111,3 +111,11 @@
         }
     }
 }
+
+//Icon cards 
+
+.card-icon {
+    @include MQ ($tablet) {
+        @include flexshort (column, flex-start, flex-start, var(--margin-XS));
+    }
+}

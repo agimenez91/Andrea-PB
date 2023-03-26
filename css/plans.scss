@@ -1,0 +1,98 @@
+@import 'tools';
+
+.price {
+    @include grid (1, var(--margin-L));
+
+    @include MQ ($tablet) {
+        gap: var(--margin-XL);
+    }
+
+    @include MQ ($desktop) {
+        gap: var(--margin-XXL);
+    }
+}
+
+.card-price {
+    @include grid (1, var(--margin-M));
+    justify-items: center;
+
+    @include MQ ($tablet) {
+        @include grid (2, var(--margin-L));
+        grid-row-gap: var(--margin-M);
+        grid-column-gap: var(--margin-XL);
+    }
+
+    &__info {
+        @include flexshort (column, flex-start, flex-start, var(--margin-M));
+    }
+
+    &__price {
+        @include flexshort (row, flex-start, flex-end, var(--margin-S));
+    }
+
+    &__img {
+        max-width: 30rem;
+
+        @include MQ ($tablet) {
+            max-width: 25rem;
+            display: grid;
+            align-self: end;
+        }
+
+        @include MQ ($desktop) {
+            max-width: 35rem;
+        }
+    }
+
+    &__btn {
+        display: grid;
+        align-items: start;
+    }
+}
+
+.odd {
+    @include MQ ($tablet) {
+        grid-column: 1;
+        grid-row: 1/span 2;
+    }
+}
+
+.even {
+    @include MQ ($tablet) {
+        grid-column: 2;
+        grid-row: 1/span 2;
+    }
+}
+
+.info__table {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    overflow:hidden;
+    overflow-y: scroll;
+    max-height: 30rem;
+    border: 1px solid var(--color-blue);
+
+    & li {
+        @include flexshort (row, space-between, center, var(--margin-M));
+        padding: var(--margin-S) var(--margin-M);
+        border-bottom: 1px solid var(--color-blue);
+
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+
+
+}
+
+
+.sect__wrap.price {
+    @include MQ ($tablet) {
+        gap: var(--margin-L);
+    }
+
+    @include MQ ($desktop) {
+        gap: var(--margin-XL);
+    }
+}

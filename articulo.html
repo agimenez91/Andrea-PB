@@ -40,18 +40,18 @@
     <!-- Topbar ends -->
 
     <!-- Main start -->
-    <main class="main article">
+    <main class="main">
         
         <!-- Cover start -->
-        <header class="cover-article">
-            <img src="https://placekeanu.com/500/300" alt="">
-            <h1 class="colorblue">Título de artículo molón</h1>
-            <p class="p--L">Autor del artículo molón</p>
+        <header class="cover--article frame nopaddingbottom">
+            <img class="cover--article__img" src="https://placekeanu.com/500/300" alt="">
+            <h1 class="txt--blue">Título de artículo molón</h1>
+            <p class="txt--orange">Autor del artículo molón</p>
         </header>
         <!-- Cover ends -->
 
         <!-- Article start -->
-        <section class="sect article">
+        <section class="frame nopaddingtop nopaddingbottom article">
             <article class="article__content">
                 <!-- The content goes here -->
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem commodi, quo non iusto saepe veniam hic asperiores sint blanditiis, tempora libero modi unde, beatae ab eveniet ratione? Neque, id autem!</p>
@@ -72,45 +72,41 @@
                     </a>
             </div>
             <aside class="sidebar">
-                <h2>
-                    ¿Quiéres mejorar tu presencia online?
-                </h2>
+                <h2>¿Quieres mejorar tu presencia online?</h2>
                 <p class="p--M">En el blog más chachi del mundo encontrarás tips y mogollón de recursos que te ayudarán a destacar sobre tu competencia</p>
-                <button class="btn--1">¡Suscríbete ya!</button>
+                <div>
+                    <button class="btn--1">¡Suscríbete ya! 
+                        <svg width="13" height="20" viewBox="0 0 13 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 17.3995C3.4227 14.6433 6.848 11.8871 10.2707 9.13081C6.87407 6.75745 3.47483 4.38409 0.0782033 2.01072C0.649088 1.57801 1.21997 1.14792 1.79086 0.71521C5.52637 3.75206 9.26449 6.79154 13 9.82839C9.3479 13.1249 5.69842 16.4187 2.04632 19.7152L0 17.3995Z"/>
+                        </svg>
+                    </button>
+                </div>
             </aside>
         </section>
         <!-- Article ends -->
 
         <!-- Blog start -->
-        <section class="sect">
-            <div class="sect__wrap">
-                <h2>El blog para ser más guay online</h2>
-                <div class="card-carrousel">
-                    <article class="card-blog">
-                        <a href="">
-                            <figure class="thumbnail"></figure>
-                            <h3>Lorem Ipsum</h3>
-                            <p class="p--XS">Lorem ipsum dolor sit amet consectetur.</p>
-                        </a>
-                    </article>
-                    <article class="card-blog">
-                        <a href="">
-                            <figure class="thumbnail"></figure>
-                            <h3>Lorem Ipsum</h3>
-                            <p class="p--XS">Lorem ipsum dolor sit amet consectetur.</p>
-                        </a>
-                    </article>
-                    <article class="card-blog">
-                        <a href="">
-                            <figure class="thumbnail"></figure>
-                            <h3>Lorem Ipsum</h3>
-                            <p class="p--XS">Lorem ipsum dolor sit amet consectetur.</p>
-                        </a>
-                    </article>
-                </div>
-                <div class="block-align--center">
-                    <button class="btn--1">¡Quiero leer más artículos!</button>
-                </div>
+        <section class="frame section__wrap">
+            <h2>Artículos relacionados:</h2>
+            <div class="carrousel">
+                <article class="card-blog">
+                    <img class="thumbnail" src="https://placekeanu.com/900/600" alt="">
+                    <h3>Lorem Ipsum</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur.</p>
+                    <a href="#" class="card-blog__link"></a>
+                </article>
+                <article class="card-blog">
+                    <img class="thumbnail" src="https://placekeanu.com/400/200" alt="">
+                    <h3>Lorem Ipsum</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur.</p>
+                    <a href="#" class="card-blog__link"></a>
+                </article>
+                <article class="card-blog">
+                    <img class="thumbnail" src="https://placekeanu.com/400/200" alt="">
+                    <h3>Lorem Ipsum</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur.</p>
+                    <a href="#" class="card-blog__link"></a>
+                </article>
             </div>
         </section>
         <!-- Blog ends -->

@@ -2,7 +2,7 @@
 
 // Buttons start
 button, .btn--1, input[type='submit'] {
-    @include flexible (flex, column, no-wrap, center, center, var(--margin-S));
+    @include flexible (flex, row, nowrap, center, center, var(--margin-S));
     @include padding (var(--typo-S), var(--margin-M));
 	border: none;
 	cursor: pointer;
